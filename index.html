@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="appl">
+    <head>
+        <title>Senor Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lib/jquery-1.11.3.js"></script>
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" type="text/css">
+        <script src="lib/bootstrap/js/bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <base href="/orit/">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <table class="table">
+                    <tr>
+                        <td class="wrapp-descktop-menu col-sm-2 col-lg-2 col-md-2">
+                            <div ui-view="menu"></div>
+                        </td>
+                        <td class="wrapp-main-content col-sm-10 col-xs-12 col-lg-10 col-md-12">
+                            <div ui-view="content"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.min.js"></script>
+        <script src="lib/angular-ui-router.js"></script>
+        <script src="lib/sanitize.js"></script>
+        <script src = "appl/appl.js" ></script>
+        <script src="appl/config.js"></script>
+        <script src="appl/Calendar/ctrlCalendar.js"></script>
+        <script src="appl/Home/ctrlHome.js"></script>
+        <script src="appl/Menu/ctrlMenu.js"></script>
+        <script src="appl/Settings/ctrlSettings.js"></script>
+        <script src="appl/Statistics/ctrlStatistics.js"></script>
+        <script src="appl/Users/ctrlUsers.js"></script>
+        <script src="appl/Workflow/ctrlWorkflow.js"></script>
+        <script src="appl/service.js"></script>
+    </body>
+</html>

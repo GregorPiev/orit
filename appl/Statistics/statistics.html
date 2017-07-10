@@ -1,0 +1,33 @@
+<ng-include src="'appl/partials/header.html'"></ng-include>
+<section>
+    <h1 ng-bind="topic" class="page-header"></h1>
+    <div class="page-content" ng-bind-html="content"></div>
+    <div class="wrapper-image">
+        <img ng-src="../project2/images/{{picture}}" alt="" class="img-responsive">
+    </div>
+    <div class="clearfix"></div>
+    <img onclick="inlineLayout()" src="../project2/images/icons/icon-layout-lines.png" alt="Lines" title="Lines" class="img-responsive layout-action">
+    <img onclick="inboxLayout()" src="../project2/images/icons/icon-layout-box.png" alt="Boxes" title="Boxes" class="img-responsive layout-action">
+    <span class="glyphicon glyphicon-search search-icon"></span><input class="search" ng-model="criteria" placeholder="Search">
+    <hr>
+    <ng-repeat ng-repeat="pict in picts| filter:criteria">
+        <div class="itemList  img-cell-repet-box">
+            <h3 ng-bind="pict.name"></h3>
+            <img ng-src="../project2/images/{{pict.src}}" alt="{{pict.name}}" class="pictList img-responsive">
+            {{pict.msg}}
+        </div>
+    </ng-repeat>
+</section>
+<script>
+    $("#menu").css('min-height', '2211px');
+    function inlineLayout() {
+        $(".itemList").removeClass('img-cell-repet-box');
+        $(".itemList").addClass('img-cell-repet-inline');
+        $("#menu").css('min-height', '2211px');
+    }
+    function inboxLayout() {
+        $(".itemList").removeClass('img-cell-repet-inline');
+        $(".itemList").addClass('img-cell-repet-box');
+        $("#menu").css('min-height', '1028px');
+    }
+</script>

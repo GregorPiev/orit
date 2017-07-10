@@ -1,0 +1,29 @@
+<ng-include src="'appl/partials/header.html'"></ng-include>
+<section>
+    <h1 ng-bind="topic" class="page-header"></h1>
+    <div class="page-content" ng-bind-html="content"></div>
+    <div class="wrapper-image">
+        <img ng-src="../project2/images/{{picture}}" alt="" class="img-responsive">
+    </div>
+    <div class="clearfix"></div>
+    <img onclick="inlineLayout()" src="../project2/images/icons/icon-layout-lines.png" alt="Lines" title="Lines" class="img-responsive layout-action">
+    <img onclick="inboxLayout()" src="../project2/images/icons/icon-layout-box.png" alt="Boxes" title="Boxes" class="img-responsive layout-action">
+    <hr>
+    <ng-repeat ng-repeat="link in links">
+        <div class="itemList  cell-repet-inline">
+            <a ng-href="{{link.src}}" target="blank">{{link.name}}</a>
+        </div>
+    </ng-repeat>
+</section>
+<script>
+    function inlineLayout() {
+        $(".itemList").removeClass('cell-repet-box');
+        $(".itemList").addClass('cell-repet-inline');
+
+    }
+    function inboxLayout() {
+        $(".itemList").removeClass('cell-repet-inline');
+        $(".itemList").addClass('cell-repet-box');
+
+    }
+</script>

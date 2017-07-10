@@ -1,0 +1,59 @@
+<ng-include src="'appl/partials/header.html'"></ng-include>
+<div id='home-page' class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h1 ng-bind="topic" class="page-header"></h1>
+    <div id="page-content-body-top">
+        <img id="sales-graf" ng-src="images/{{above_left}}" class="img-responsive" alt="" title=""        />
+        <img id="report-graf" ng-src="images/{{above_right}}" class="img-responsive" alt="" title="" />
+    </div>
+
+    <div id="page-content-body-bottom">
+        <div id="bottom-left">
+            <h3>Task<span class="badge bundle-red pull-right">2</span><span  class="badge bundle-blue pull-right">5</span></h3>
+            <div ng-repeat="itemLeft in botom_left" class="item-bottom">
+                <div>
+                    <span class="badge bundle-blue" ng-bind="itemLeft.top"></span>
+                </div>
+                <div>
+                    <b>{{itemLeft.content}}</b>
+                    <br><img src="images/icons/watch.png" alt="" title="">&nbsp;<span class="watch" title="{{itemLeft.title}}">{{itemLeft.wotch}}</span>
+                </div>
+                <div><img src="images/icons/dots.png" title="" alt=''/></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div id="bottom-middle">
+            <h3>Messages <span  class="badge pull-right bundle-blue">2</span></h3>
+
+            <div ng-repeat="itemMiddle in botom_middle" class="item-bottom">
+                <div>
+                    <img  ng-src="images/{{itemMiddle.img}}" alt="{{itemMiddle.top}}" class="img-responsive img-circle user-icon">
+                </div>
+                <div>
+                    <h4>{{itemMiddle.top}}&nbsp;<small>{{itemMiddle.wotch}}</small></h4>
+                    {{itemMiddle.content}}<br>
+                    <img src="images/icons/arrow.png" alt="" title="" />
+                    <img src="images/icons/gear.png" alt="" title="" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div id="bottom-right">
+            <h3>Activity<span  class="badge pull-right bundle-blue">10</span></h3>
+            <div ng-repeat="itemRight in botom_right" class="item-bottom">
+                <div>
+                    <img ng-src="images/{{itemRight.img}}" alt="{{itemRight.top}}" class="img-responsive img-circle user-icon">
+                </div>
+                <div>
+                    <h4>{{itemRight.top}}&nbsp<small>{{itemRight.content}}</small>&nbsp;<strong>{{itemRight.contentbold}}</strong>  </h4>
+                    <img src="images/icons/watch.png" alt="" title="">&nbsp;<span class="watch" >{{itemRight.wotch}}</span>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+</div>
