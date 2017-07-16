@@ -1,4 +1,4 @@
-appl.controller('ctrlMenu', ['$scope', function ($scope) {
+export default appl.controller('ctrlMenu', ['$scope', function ($scope) {
         var listenToTick = function () {
             $scope.$on("TICK", function (event, tick) {
                 $scope.tick = tick;

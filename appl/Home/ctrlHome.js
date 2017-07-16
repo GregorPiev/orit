@@ -1,4 +1,4 @@
-appl.controller('ctrlHome', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
+export default appl.controller('ctrlHome', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
         console.info("Controller: ctrlHome");
         DataService.read('Home', function (data) {
             //console.info("Read:" + JSON.stringify(data));

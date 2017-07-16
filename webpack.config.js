@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./appl/appl.js",
+    entry: "./appl.drv.js",
     output: {
         path: __dirname + '/build/',
         publicPath: '/build',

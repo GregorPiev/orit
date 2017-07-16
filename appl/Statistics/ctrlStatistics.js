@@ -1,4 +1,4 @@
-appl.controller('ctrlStatistics', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
+export default appl.controller('ctrlStatistics', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
         console.info("Controller: ctrlStatistics");
         DataService.read('Statistics', function (data) {
             console.info("Read:" + JSON.stringify(data));

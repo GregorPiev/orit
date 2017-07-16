@@ -1,4 +1,4 @@
-appl.controller('ctrlCalendar', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
+export default appl.controller('ctrlCalendar', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
         console.info("Controller: ctrlCalendar");
         DataService.read('Calendar', function (data) {
             console.info("Read:" + JSON.stringify(data));

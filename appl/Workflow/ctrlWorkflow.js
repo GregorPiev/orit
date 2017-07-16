@@ -1,4 +1,4 @@
-appl.controller('ctrlWorkflow', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
+export default appl.controller('ctrlWorkflow', ['$scope', '$http', 'DataService', function ($scope, $http, DataService) {
         console.info("Controller: ctrlWorkflow");
         DataService.read('Workflow', function (data) {
             console.info("Read:" + JSON.stringify(data));
