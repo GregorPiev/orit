@@ -1,4 +1,4 @@
-export default appl.config(function ($stateProvider, $urlRouterProvider) {
+angular.module('appl.config',[]).config(function ($stateProvider, $urlRouterProvider) {
     /* Error 404 */
     $urlRouterProvider.otherwise("/");
     console.info("Config");

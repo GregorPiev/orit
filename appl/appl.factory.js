@@ -1,4 +1,4 @@
-export default appl.factory('tickGenerator', function ($rootScope, $timeout) {
+angular.module('appl.factory',[]).factory('tickGenerator', function ($rootScope, $timeout) {
     var _tickTimeout;
     var _start = function () {
         _tick();
