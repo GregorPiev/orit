@@ -11,23 +11,17 @@
 //        });
 //    }]);
 
-export class Home{
-    constructor($scope, DataService){
-        console.info("%cController: ctrlHome","color: darkorange;");
-        this.$scope = $scope;
-        this.DataService=DataService;
-        this.init();
-    }
-    
-    init(){
-        this.DataService.read('Home', function (data) {
-            console.info("%cRead:" + JSON.stringify(data),"color:green;");
-            this.$scope.topic = data.data.Topic;
-            this.$scope.above_left = data.data.above_left;
-            this.$scope.above_right = data.data.above_right;
-            this.$scope.botom_left = data.data.botom_left;
-            this.$scope.botom_middle = data.data.botom_middle;
-            this.$scope.botom_right = data.data.botom_right;
+export default angular.module('appl.home',[]).controller('ctrlHome',ctrlHome);
+
+function ctrlHome($scope, DataService){
+    console.info("%cController: ctrlHome","color: orange");
+        DataService.read('Home', function (data) {
+            console.info("$cRead:" + JSON.stringify(data),"color: green");
+            $scope.topic = data.data.Topic;
+            $scope.above_left = data.data.above_left;
+            $scope.above_right = data.data.above_right;
+            $scope.botom_left = data.data.botom_left;
+            $scope.botom_middle = data.data.botom_middle;
+            $scope.botom_right = data.data.botom_right;
         });
-    }
 }

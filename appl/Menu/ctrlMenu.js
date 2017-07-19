@@ -1,27 +1,36 @@
-//export default appl.controller('ctrlMenu', ['$scope', function ($scope) {
-//        var listenToTick = function () {
-//            $scope.$on("TICK", function (event, tick) {
-//                $scope.tick = tick;
-//            });
-//
-//        };
-//        listenToTick();
-//    }]);
 'use strict';
-export class Menu{
-    constructor($scope){
-        this.$scope=$scope;
+export default angular.module('appl.ctrlMenu', []).directive('menu', menuConfig);
+
+function menuConfig() {
+    return{
+        restrict: "E",
+        replace: true,
+        scope: {
+            data: '='
+        },
+        template: require('./menu.html'),
+        controller: menuController,
+        controllerAs: 'ctrlMenu'
+    };
+
+}
+
+
+class menuController {
+    constructor($scope) {
+        this.$scope = $scope;
         this.init();
     }
-    
-    init(){
+
+    init() {
         this.listenToTick();
     }
-    
-    listenToTick(){
-        var _this=this;
+
+    listenToTick() {
+        var _this = this;
         this.$scope.$on("TICK", function (event, tick) {
-                _this.$scope.tick = tick;
-            });
+            _this.$scope.tick = tick;
+        });
     }
-};
+}
+;

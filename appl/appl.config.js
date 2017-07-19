@@ -9,24 +9,25 @@ angular.module('appl.config',[]).config(function ($stateProvider, $urlRouterProv
                 views: {
                     menu: {
                         controller: 'ctrlMenu',
-                        templateUrl: 'appl/Menu/menu.html'
+                        template: '<menu></menu>'
                     },
                     'content': {
                         controller: 'ctrlHome',
-                        templateUrl: 'appl/Home/home.html'
+                        template: '<home></home>'
                     }
 
                 }
-            }).state('Workflow', {
+            })
+        .state('Workflow', {
         url: '/Workflow',
         views: {
             menu: {
                 controller: 'ctrlMenu',
-                templateUrl: 'appl/Menu/menu.html'
+                 template: '<menu></menu>'
             },
             'content': {
                 controller: 'ctrlWorkflow',
-                templateUrl: 'appl/Workflow/workflow.html'
+                template: '<workflow></workflow>'
             }
 
         }
@@ -35,11 +36,11 @@ angular.module('appl.config',[]).config(function ($stateProvider, $urlRouterProv
         views: {
             menu: {
                 controller: 'ctrlMenu',
-                templateUrl: 'appl/Menu/menu.html'
+                template: '<menu></menu>'
             },
             'content': {
                 controller: 'ctrlStatistics',
-                templateUrl: 'appl/Statistics/statistics.html'
+                template: '<statistics></statistics>'
             }
 
         }
@@ -48,11 +49,11 @@ angular.module('appl.config',[]).config(function ($stateProvider, $urlRouterProv
         views: {
             menu: {
                 controller: 'ctrlMenu',
-                templateUrl: 'appl/Menu/menu.html'
+                 template: '<menu></menu>'
             },
             'content': {
                 controller: 'ctrlCalendar',
-                templateUrl: 'appl/Calendar/calendar.html'
+                template: '<calendar></calendar>'
             }
 
         }
@@ -61,11 +62,11 @@ angular.module('appl.config',[]).config(function ($stateProvider, $urlRouterProv
         views: {
             menu: {
                 controller: 'ctrlMenu',
-                templateUrl: 'appl/Menu/menu.html'
+                template: '<menu></menu>'
             },
             'content': {
                 controller: 'ctrlUsers',
-                templateUrl: 'appl/Users/users.html'
+                template: '<users></users>'
             }
         }
     }).state('Settings', {
@@ -73,11 +74,11 @@ angular.module('appl.config',[]).config(function ($stateProvider, $urlRouterProv
         views: {
             menu: {
                 controller: 'ctrlMenu',
-                templateUrl: 'appl/Menu/menu.html'
+                template: '<menu></menu>'
             },
             'content': {
                 controller: 'ctrlSettings',
-                templateUrl: 'appl/Settings/settings.html'
+                template: '<settings></settings>'
             }
         }
     });
