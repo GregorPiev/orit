@@ -1,36 +1,9 @@
-'use strict';
-export default angular.module('appl.ctrlMenu', []).directive('menu', menuConfig);
+appl.controller('ctrlMenu', ['$scope', function ($scope) {
+        var listenToTick = function () {
+            $scope.$on("TICK", function (event, tick) {
+                $scope.tick = tick;
+            });
 
-function menuConfig() {
-    return{
-        restrict: "E",
-        replace: true,
-        scope: {
-            data: '='
-        },
-        template: require('./menu.html'),
-        controller: menuController,
-        controllerAs: 'ctrlMenu'
-    };
-
-}
-
-
-class menuController {
-    constructor($scope) {
-        this.$scope = $scope;
-        this.init();
-    }
-
-    init() {
-        this.listenToTick();
-    }
-
-    listenToTick() {
-        var _this = this;
-        this.$scope.$on("TICK", function (event, tick) {
-            _this.$scope.tick = tick;
-        });
-    }
-}
-;
+        };
+        listenToTick();
+    }]);
